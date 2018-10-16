@@ -1,0 +1,67 @@
+.App {
+    text-align: center;
+}
+
+.gameSection{
+ height: 100vh;
+}
+
+
+
+img.cardImg {
+    width: 100%;
+}
+
+.card{
+    width: 100%;
+    height: 205px;
+    border:0px;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 0;
+
+}
+
+.front {
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-image: linear-gradient(to right, #9C27B0 , #2196F3);
+    -webkit-transition-property: opacity, transform, box-shadow;
+    -webkit-transition-duration: .3s;
+    -webkit-backface-visibility: hidden;
+}
+
+.flipper.flipped {
+    transform: rotateY(180deg);
+    cursor: not-allowed;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.btn-newGame{
+    margin-top: 10%;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
